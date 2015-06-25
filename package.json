@@ -1,0 +1,54 @@
+{
+  "name": "is-online-cli",
+  "version": "0.0.0",
+  "description": "Check if the internet connection is up",
+  "license": "MIT",
+  "repository": "sindresorhus/is-online-cli",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "bin": {
+    "is-online": "cli.js"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    "browser",
+    "online",
+    "offline",
+    "is-online",
+    "network",
+    "connected",
+    "connectivity",
+    "internet",
+    "is",
+    "has",
+    "detect",
+    "hostname",
+    "hostnames",
+    "dns",
+    "socket",
+    "reachable",
+    "reachability",
+    "accessible"
+  ],
+  "dependencies": {
+    "is-online": "^4.0.2",
+    "log-symbols": "^1.0.0",
+    "meow": "^3.3.0"
+  },
+  "devDependencies": {
+    "ava": "0.0.4"
+  }
+}
