@@ -44,7 +44,7 @@
     "accessible"
   ],
   "dependencies": {
-    "is-online": "^4.0.2",
+    "is-online": "^5.0.0",
     "log-symbols": "^1.0.0",
     "meow": "^3.3.0"
   },
