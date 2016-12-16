@@ -1,18 +1,16 @@
 #!/usr/bin/env node
 'use strict';
-var logSymbols = require('log-symbols');
-var meow = require('meow');
-var isOnline = require('is-online');
+const logSymbols = require('log-symbols');
+const meow = require('meow');
+const isOnline = require('is-online');
 
-meow({
-	help: [
-		'Example',
-		'  $ is-online',
-		'  ' + logSymbols.success + ' Online'
-	]
-});
+meow(`
+	Example
+	  $ is-online
+	  ${logSymbols.success} Online
+`);
 
-isOnline(function (err, online) {
-	console.log(online ? logSymbols.success + ' Online' : logSymbols.error + ' Offline');
+isOnline().then(online => {
+	console.log(online ? `${logSymbols.success} Online` : `${logSymbols.error} Offline`);
 	process.exit(online ? 0 : 1);
 });
