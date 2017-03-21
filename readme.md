@@ -17,9 +17,15 @@ $ npm install --global is-online-cli
 ```
 $ is-online --help
 
+  Check if the internet connection is up
+
+  Options
+    --timeout    Milliseconds to wait for a server to respond (default: 5000)
+
   Example
     $ is-online
-    ✔︎ Online
+    ✔ Online
+
 ```
 
 
