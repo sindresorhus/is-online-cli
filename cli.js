@@ -11,6 +11,10 @@ meow(`
 `);
 
 isOnline().then(online => {
-	console.log(online ? `${logSymbols.success} Online` : `${logSymbols.error} Offline`);
+	if (online) {
+		process.stdout.write(`${logSymbols.success} Online\n`);
+	} else {
+		process.stderr.write(`${logSymbols.error} Offline\n`);
+	}
 	process.exit(online ? 0 : 1);
 });
