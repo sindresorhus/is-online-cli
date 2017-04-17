@@ -17,9 +17,15 @@ $ npm install --global is-online-cli
 ```
 $ is-online --help
 
+  Usage
+    $ is-online
+
+  Options
+    --timeout  Milliseconds to wait for a server to respond (Default: 5000)
+
   Example
     $ is-online
-    ✔︎ Online
+    ✔ Online
 ```
 
 
