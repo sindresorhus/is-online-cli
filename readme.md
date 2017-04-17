@@ -21,7 +21,7 @@ $ is-online --help
     $ is-online
 
   Options
-    --timeout  Milliseconds to wait for a server to respond (Default: 5000)
+    --timeout  Seconds to wait for a server to respond (Default: 5)
 
   Example
     $ is-online

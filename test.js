@@ -6,10 +6,10 @@ test(async t => {
 	t.true(stdout.length > 0);
 });
 
-test('should exit with 0 when online', t => {
-	t.notThrows(execa('./cli.js'));
+test('should exit with 0 when online', async t => {
+	await t.notThrows(execa('./cli.js'));
 });
 
-test('should exit with 1 when offline', t => {
-	t.throws(execa('./cli.js', ['--timeout=1']));
+test('should exit with 1 when offline', async t => {
+	await t.throws(execa('./cli.js', ['--timeout=0.00001']));
 });

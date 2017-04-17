@@ -9,14 +9,20 @@ const cli = meow(`
 	  $ is-online
 
 	Options
-	  --timeout  Milliseconds to wait for a server to respond (Default: 5000)
+	  --timeout  Seconds to wait for a server to respond (Default: 5)
 
 	Example
 	  $ is-online
 	  ${logSymbols.success} Online
-`);
+`, {
+	default: {
+		timeout: 5
+	}
+});
 
-isOnline(cli.flags).then(online => {
+isOnline({
+	timeout: cli.flags.timeout * 1000
+}).then(online => {
 	console.log(online ? `${logSymbols.success} Online` : `${logSymbols.error} Offline`);
 	process.exit(online ? 0 : 1);
 });
