@@ -11,5 +11,5 @@ test('should exit with 0 when online', t => {
 });
 
 test('should exit with 1 when offline', t => {
-	t.throws(execa('./cli.js', ['--timeout', '1']));
+	t.throws(execa('./cli.js', ['--timeout=1']));
 });
