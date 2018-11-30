@@ -15,14 +15,20 @@ const cli = meow(`
 	  $ is-online
 	  ${logSymbols.success} Online
 `, {
-	default: {
-		timeout: 5
+	flags: {
+		timeout: {
+			type: 'number',
+			default: 5
+		}
 	}
 });
 
-isOnline({
-	timeout: cli.flags.timeout * 1000
-}).then(online => {
+(async () => {
+	const online = await isOnline({
+		timeout: cli.flags.timeout * 1000
+	});
+
 	console.log(online ? `${logSymbols.success} Online` : `${logSymbols.error} Offline`);
 	process.exit(online ? 0 : 1);
-});
+})();
+

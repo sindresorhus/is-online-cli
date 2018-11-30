@@ -2,7 +2,7 @@
 
 > Check if the internet connection is up
 
-<img src="screenshot.png" width="397">
+<img src="screenshot.png" width="397" height="98">
 
 
 ## Install
