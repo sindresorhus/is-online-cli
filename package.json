@@ -4,16 +4,18 @@
 	"description": "Check if the internet connection is up",
 	"license": "MIT",
 	"repository": "sindresorhus/is-online-cli",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
 		"url": "https://sindresorhus.com"
 	},
+	"type": "module",
 	"bin": {
 		"is-online": "cli.js"
 	},
 	"engines": {
-		"node": ">=8"
+		"node": ">=14.16"
 	},
 	"scripts": {
 		"test": "xo && ava"
@@ -44,13 +46,13 @@
 		"accessible"
 	],
 	"dependencies": {
-		"is-online": "^8.0.0",
-		"log-symbols": "^2.2.0",
-		"meow": "^5.0.0"
+		"is-online": "^10.0.0",
+		"log-symbols": "^5.1.0",
+		"meow": "^10.1.2"
 	},
 	"devDependencies": {
-		"ava": "^0.25.0",
-		"execa": "^1.0.0",
-		"xo": "^0.23.0"
+		"ava": "^4.3.0",
+		"execa": "^6.1.0",
+		"xo": "^0.49.0"
 	}
 }

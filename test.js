@@ -1,5 +1,5 @@
 import test from 'ava';
-import execa from 'execa';
+import {execa} from 'execa';
 
 test('main', async t => {
 	const {stdout} = await execa('./cli.js');
@@ -7,9 +7,9 @@ test('main', async t => {
 });
 
 test('should exit with 0 when online', async t => {
-	await t.notThrows(execa('./cli.js'));
+	await t.notThrowsAsync(execa('./cli.js'));
 });
 
 test('should exit with 1 when offline', async t => {
-	await t.throws(execa('./cli.js', ['--timeout=0.00001']));
+	await t.throwsAsync(execa('./cli.js', ['--timeout=0.00001']));
 });

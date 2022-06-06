@@ -6,8 +6,8 @@
 
 ## Install
 
-```
-$ npm install --global is-online-cli
+```sh
+npm install --global is-online-cli
 ```
 
 ## Usage
@@ -24,6 +24,8 @@ $ is-online --help
   Example
     $ is-online
     ✔ Online
+
+  Exit code 0 if online and 1 if offline.
 ```
 
 ## Related

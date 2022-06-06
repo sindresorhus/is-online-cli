@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-'use strict';
-const logSymbols = require('log-symbols');
-const meow = require('meow');
-const isOnline = require('is-online');
+import process from 'node:process';
+import logSymbols from 'log-symbols';
+import meow from 'meow';
+import isOnline from 'is-online';
 
 const cli = meow(`
 	Usage
@@ -14,21 +14,21 @@ const cli = meow(`
 	Example
 	  $ is-online
 	  ${logSymbols.success} Online
+
+	Exit code 0 if online and 1 if offline.
 `, {
+	importMeta: import.meta,
 	flags: {
 		timeout: {
 			type: 'number',
-			default: 5
-		}
-	}
+			default: 5,
+		},
+	},
 });
 
-(async () => {
-	const online = await isOnline({
-		timeout: cli.flags.timeout * 1000
-	});
+const online = await isOnline({
+	timeout: cli.flags.timeout * 1000,
+});
 
-	console.log(online ? `${logSymbols.success} Online` : `${logSymbols.error} Offline`);
-	process.exit(online ? 0 : 1);
-})();
-
+console.log(online ? `${logSymbols.success} Online` : `${logSymbols.error} Offline`);
+process.exit(online ? 0 : 1);
