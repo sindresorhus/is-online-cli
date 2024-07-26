@@ -30,4 +30,4 @@ $ is-online --help
 
 ## Related
 
-- [is-online](https://github.com/sindresorhus/is-online) - API for this module
+- [is-online](https://github.com/sindresorhus/is-online) - API for this package
